@@ -1,0 +1,5 @@
+
+goods_input_furniture_add = {
+	good = no
+	percent = no
+}

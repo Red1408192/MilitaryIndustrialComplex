@@ -1,0 +1,3 @@
+Low effort mod to slightly increase the attraction for the armed forces IG:
+Capitalists working (investing) in buildings of the military industrial complex (EG: industry producing military goods) have an attraction modifier toward the IG.
+Countries in wich the power distribution favors capitalists and the wealthiest AND owns a strong armament industry, should see an increased clout for the armed forces

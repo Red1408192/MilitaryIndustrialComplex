@@ -1,0 +1,15 @@
+﻿l_english:
+
+ provisions:0 "Provisions"
+ provisions_desc:0 "The provision for your Army day-to-day survival"
+ mobilization_option_basic_provisions:0 "Basic provision"
+ mobilization_option_basic_provisions_desc:0 "The bare minimum that soldiers need to camp and stay warm."
+
+ mobilization_option_extra_provisions:0 "Extra provision"
+ mobilization_option_extra_provisions_desc:0 "Extra fornitures to make the camp life easier"
+
+ mobilization_option_luxurious_provisions:0 "Luxurious provision"
+ mobilization_option_luxurious_provisions_desc:0 "Fornitures for only the best elite soldiers"
+
+ modifier_goods_input_furniture_add:0 "@furniture! $furniture$ input"
+ modifier_goods_input_furniture_add_desc:0 "The amount of @furniture! $furniture$ consumed by buildings"
