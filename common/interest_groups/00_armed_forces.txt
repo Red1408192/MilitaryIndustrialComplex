@@ -103,12 +103,16 @@
 			is_pop_type = aristocrats
 			AND = {
 				is_pop_type = capitalists
-				OR = {
-					pop_employment_building = building_war_machine_industry
-					pop_employment_building = building_arms_industry
-					pop_employment_building = building_munition_plants
-					pop_employment_building = building_artillery_foundries
-					pop_employment_building = building_military_shipyards
+				NOT = {
+					scope:interest_group = {
+						scope:leader = {
+							OR = {
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_vanguardist
+								has_ideology = ideology:ideology_anarchist
+							}
+						}
+					}
 				}
 			}
 			pop_is_discriminated = no
@@ -250,6 +254,17 @@
 							pop_employment_building = building_artillery_foundries
 							pop_employment_building = building_military_shipyards
 						}
+						NOT = {
+							scope:interest_group = {
+								scope:leader = {
+									OR = {
+										has_ideology = ideology:ideology_communist
+										has_ideology = ideology:ideology_vanguardist
+										has_ideology = ideology:ideology_anarchist
+									}
+								}
+							}
+						}
 					}
 				}
 				value = 400
@@ -268,6 +283,17 @@
 							}
 							owner = {
 								has_law = law_type:law_mass_conscription
+							}
+						}
+						NOT = {
+							scope:interest_group = {
+								scope:leader = {
+									OR = {
+										has_ideology = ideology:ideology_communist
+										has_ideology = ideology:ideology_vanguardist
+										has_ideology = ideology:ideology_anarchist
+									}
+								}
 							}
 						}
 					}

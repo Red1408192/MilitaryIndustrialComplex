@@ -72,7 +72,7 @@ mobilization_option_extra_provisions = {
 		unit_recovery_rate_add = 0.1
 		unit_morale_loss_mult = -0.1
 	}
-	ai_value = 1 # can't turn off anyway
+	ai_value = 1000
 
 	group = provisions
 }
