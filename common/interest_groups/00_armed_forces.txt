@@ -101,21 +101,19 @@
 			is_pop_type = soldiers
 			is_pop_type = officers
 			is_pop_type = aristocrats
+			pop_is_discriminated = no
 			AND = {
 				is_pop_type = capitalists
 				NOT = {
-					scope:interest_group = {
-						scope:leader = {
-							OR = {
-								has_ideology = ideology:ideology_communist
-								has_ideology = ideology:ideology_vanguardist
-								has_ideology = ideology:ideology_anarchist
-							}
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_vanguardist
+							has_ideology = ideology:ideology_communist
+							has_ideology = ideology:ideology_anarchist
 						}
 					}
 				}
 			}
-			pop_is_discriminated = no
 		}
 	}
 
@@ -245,8 +243,11 @@
 			desc = "POP_CAPITALISTS"
 			if = {
 				limit = {
-					AND = {
-						is_pop_type = capitalists
+					is_pop_type = capitalists
+				}
+				value = 60
+				if = {
+					limit = {
 						OR = {
 							pop_employment_building = building_war_machine_industry
 							pop_employment_building = building_arms_industry
@@ -254,51 +255,23 @@
 							pop_employment_building = building_artillery_foundries
 							pop_employment_building = building_military_shipyards
 						}
-						NOT = {
-							scope:interest_group = {
-								scope:leader = {
-									OR = {
-										has_ideology = ideology:ideology_communist
-										has_ideology = ideology:ideology_vanguardist
-										has_ideology = ideology:ideology_anarchist
-									}
+					}
+					value = 400
+				}
+				if = {
+					limit = {
+						scope:interest_group = {
+							leader = {
+								OR = {
+									has_ideology = ideology:ideology_vanguardist
+									has_ideology = ideology:ideology_communist
+									has_ideology = ideology:ideology_anarchist
 								}
 							}
 						}
 					}
+					value = 0
 				}
-				value = 400
-			}
-		}
-
-		add = { #Capitalist see the army as a way to make some money selling furnitures
-			desc = "POP_CAPITALISTS"
-			if = {
-				limit = {
-					AND = {
-						is_pop_type = capitalists
-						OR = {
-							owner = {
-								has_law = law_type:law_professional_army
-							}
-							owner = {
-								has_law = law_type:law_mass_conscription
-							}
-						}
-						NOT = {
-							scope:interest_group = {
-								scope:leader = {
-									OR = {
-										has_ideology = ideology:ideology_communist
-										has_ideology = ideology:ideology_vanguardist
-										has_ideology = ideology:ideology_anarchist
-									}
-								}
-							}
-						}
-					}
-				}
-				value = 80
 			}
 		}
 
@@ -354,7 +327,6 @@
 			}
 		}
 	}
-
 	monarch_weight = {
 		value = 1
 		# Monarch is not likely to adopt a marginal IG
