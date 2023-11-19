@@ -245,7 +245,7 @@
 				limit = {
 					is_pop_type = capitalists
 				}
-				value = 60
+				value = 40
 				if = {
 					limit = {
 						OR = {
@@ -256,7 +256,7 @@
 							pop_employment_building = building_military_shipyards
 						}
 					}
-					value = 400
+					value = 300
 				}
 				if = {
 					limit = {
